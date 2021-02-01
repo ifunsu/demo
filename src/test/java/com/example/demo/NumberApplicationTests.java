@@ -15,14 +15,20 @@ class NumberApplicationTests {
 	
 	@Test
 	void contextLoads() {
-		
+	}
+
+	@Test
+	void testProcess() {
 		String[] array = {"ad","ae","af","bd","be","bf","cd","ce","cf"};
 		String[] result = this.numberService.process(new int[]{2,3});
 		for (int i = 0; i < result.length; i++) {
 			Assert.isTrue(array[i].equals(result[i]), "When you see this message, something goes wrong!");			
 		}
-//		this.numberService.process(new int[]{9});
-//		this.numberService.process(new int[]{2,38,76,54,9,10});
 	}
-
+	
+	@Test
+	void testPrint() {
+		String[] array = {"ad","ae","af","bd","be","bf","cd","ce","cf"};
+		this.numberService.print(array);
+	}
 }
